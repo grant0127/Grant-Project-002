@@ -241,4 +241,4 @@ Adjust the paths above to match your actual layout.
 
 ## Author
 
-**[Your Name]** | [LinkedIn](https://linkedin.com/in/your-profile) | [GitHub](https://github.com/your-username)
+**[Grant Parker]** | [LinkedIn](https://www.linkedin.com/in/grant-parker-a119632b3/?isSelfProfile=true)
