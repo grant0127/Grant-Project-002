@@ -28,7 +28,7 @@ The report is organized around one question per stakeholder level:
 | Stakeholder | Question |
 |---|---|
 | **Executive (CFO / CEO)** | Is our profitability improving, and which states are driving it? |
-| **Regional / operations manager** | Which stores are underperforming their peers, and what's different about them? |
+| **Regional / operations manager** | Which states are underperforming their peers? |
 | **Department / category manager** | Is my department's share of revenue and its profit margin changing over time, and where is it strongest? |
 
 ---
