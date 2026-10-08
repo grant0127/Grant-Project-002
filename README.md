@@ -101,7 +101,6 @@ SELECTCOLUMNS (
 | `Total Expenses` | Sum of store expenses |
 | `Profit` | Revenue minus expenses |
 | `Margin %` | Profit divided by revenue |
-| `Revenue to Expense Ratio` | Revenue divided by expenses (matches the `*_Profit_Ratio` columns) |
 
 ### Q1: Profitability trend by state
 
