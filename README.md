@@ -17,8 +17,6 @@ A three-page Power BI report built on a **synthetic supermarket dataset**: 1,000
 - [Data Model](#data-model)
 - [DAX Measures](#dax-measures)
 - [Key Definitions](#key-definitions)
-- [Repository Structure](#repository-structure)
-- [How to Reproduce](#how-to-reproduce)
 - [Tools Used](#tools-used)
 - [Possible Next Steps](#possible-next-steps)
 
@@ -219,67 +217,22 @@ RETURN
 
 Ratios are always recomputed from summed revenue and expenses. Averaging the pre-computed ratio columns gives incorrect results.
 
----
-
-## Repository Structure
-
-```
-.
-├── README.md
-├── dax_measures.dax                       # Every DAX measure, in creation order
-├── generate_data.py                       # Synthetic data generator (seeded)
-├── data/
-│   ├── supermarket_Original_Data_V2.xlsx  # Flat table used by Power BI
-│   ├── supermarket_flat.csv               # Same data, CSV
-│   ├── stores.csv                         # Store dimension (Store_ID, State)
-│   ├── store_financials.csv               # Store-year totals
-│   ├── department_revenue.csv             # Long format: store, year, department, revenue
-│   └── department_expenses.csv            # Long format: store, year, department, expenses
-├── powerbi/
-│   └── supermarket_report.pbix            # Power BI report
-└── docs/
-    ├── page1_executive_overview.png
-    ├── page2_state_performance.png
-    └── page3_department_profit.png
-```
-
-Adjust the paths to match your actual layout.
-
----
-
-## How to Reproduce
-
-1. **Generate the data (optional):**
-   ```bash
-   pip install numpy pandas
-   python generate_data.py
-   ```
-   This writes the CSV files and runs validation checks on every constraint.
-2. **Open Power BI Desktop** and load the flat table. Name it `supermarket_flat`, or update the table name in the DAX.
-3. **Create the `Departments` table** (Modeling > New table) using the first block in `dax_measures.dax`. Sort `Department` by `Sort`, and do not create any relationship for it.
-4. **Add the measures** from `dax_measures.dax`, one at a time (Modeling > New measure), in the order listed.
-5. **Format** percentage measures as Percentage, dollar measures with a thousands separator, and set `Year` and `Store_ID` to "Don't summarize".
-6. **Build the three pages** shown in the [Dashboard](#dashboard) section. For the department slicer on Page 3, use **Edit interactions** to keep the department chart showing all ten departments.
-
----
 
 ## Tools Used
 
-- **Python** (NumPy, pandas) for synthetic data generation and validation
-- **Excel / CSV** for the source data
+- **Claude** For synthetic data generation
+- **Excel** Organization of Information
 - **Power BI Desktop** for modeling and visualization
-- **DAX** for measures
+- **DAX** for formula Calculation
 
 ---
 
 ## Possible Next Steps
 
-- Add store-size tiers (small / medium / large) to compare stores against size-matched peers
 - Compare each department's expense growth to its revenue growth (CAGR) to catch cost pressure early
 - Make the underperformer threshold adjustable with a what-if parameter
 - Add regional groupings (Northeast, South, Midwest, West) above state level
-- Unpivot the department columns in Power Query to remove the `SWITCH` logic
-- Load the data into BigQuery and connect Power BI to the warehouse
+- Load a real dataset from BigQuery or any other live database location and base visuals off of that
 
 ---
 
