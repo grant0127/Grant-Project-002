@@ -145,8 +145,6 @@ There are no relationships. Department revenue and expenses live in separate col
 
 ## DAX Measures
 
-The full code for every measure is in [`dax_measures.dax`](dax_measures.dax). Summary by question:
-
 ### Base measures
 
 | Measure | Purpose |
