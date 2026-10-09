@@ -38,6 +38,7 @@ A three-page Power BI report built on a **synthetic supermarket dataset**: 1,000
 
 *Is our profitability improving, and which states are driving it?*
 
+![Page 1: executive overview](docs/Screenshot%202026-10-08%20151928.png)
 
 **What's on the page:** profit by year, margin % by year, a state slicer, and a state table (profit and margin %) with data bars on profit.
 
@@ -52,6 +53,7 @@ A three-page Power BI report built on a **synthetic supermarket dataset**: 1,000
 
 *Which states are underperforming their peers?*
 
+![Page 2: state performance](docs/Screenshot%202026-10-09%20011656.png)
 
 **What's on the page:** a table of states with their department margin, an **Underperformer Flag** (margin below 4.5%), and a count of store-years. A **Department** slicer and a **Year** slicer let you check performance for one department or one year. The screenshot shows Household & General Merchandise selected.
 
@@ -67,6 +69,7 @@ A three-page Power BI report built on a **synthetic supermarket dataset**: 1,000
 
 *Which department is driving the most profit, and which causes the most losses?*
 
+![Page 3: department profit](docs/Screenshot%202026-10-08%20152015.png)
 
 **What's on the page:** four slicers (**State**, **Store_ID**, **Department**, **Year**) so a store owner can pick their own store, a profit-by-year chart, and a table of department profit and each department's **share of total profit**. With no store selected, the page shows the whole chain, as in the screenshot.
 
